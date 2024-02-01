@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: chay-techs-frontend
-  namespace: chay-techs-production
+  namespace: chay-techs-test
   labels:
     app: chay-techs-frontend
     environment: production
