@@ -5,9 +5,9 @@ metadata:
   namespace: chay-techs-test
   labels:
     app: chay-techs-frontend
-    environment: production
+    environment: development
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: chay-techs-frontend
@@ -15,7 +15,7 @@ spec:
     metadata:
       labels:
         app: chay-techs-frontend
-        environment: production
+        environment: development
     spec:
       containers:
         - name: chay-techs-frontend
