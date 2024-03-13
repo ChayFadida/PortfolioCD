@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chay-techs-frontend
-  namespace: chay-techs-test
+  name: chay-techs-deployments
+  namespace: chay-techs-development
   labels:
-    app: chay-techs-frontend
+    app: chay-techs
     environment: development
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: chay-techs-frontend
+      app: chay-techs
   template:
     metadata:
       labels:
-        app: chay-techs-frontend
+        app: chay-techs
         environment: development
     spec:
       containers:
-        - name: chay-techs-frontend
+        - name: chay-techs
           image: harbor.chay-techs.com/portfolio/portfolio-front:fakeDevelop_e5fd6b6
           ports:
             - containerPort: 3000
       imagePullSecrets:
-        - name: chay-techs-registry-key
+        - name: harbor-registry-key
