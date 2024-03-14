@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: chay-techs-deployments
-  namespace: chay-techs-development
+  namespace: chay-techs-production
   labels:
     app: chay-techs
-    environment: development
+    environment: production
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: chay-techs
@@ -15,11 +15,11 @@ spec:
     metadata:
       labels:
         app: chay-techs
-        environment: development
+        environment: production
     spec:
       containers:
         - name: chay-techs
-          image: harbor.chay-techs.com/portfolio/portfolio-front:fakeDevelop_e5fd6b6
+          image: harbor.chay-techs.com/portfolio/portfolio-front:1.0.6
           ports:
             - containerPort: 3000
       imagePullSecrets:
