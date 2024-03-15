@@ -6,13 +6,11 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
-
 spec:
   tls:
   - hosts:
     - chay-techs.com
     secretName: ingress-tls-ssl
-
   rules:
   - host: chay-techs.com
     http:
