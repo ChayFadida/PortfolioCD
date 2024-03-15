@@ -10,11 +10,11 @@ metadata:
 spec:
   tls:
   - hosts:
-    - chay-techs.com
+    - test.chay-techs.com
     secretName: ingress-tls-ssl
 
   rules:
-  - host: chay-techs.com
+  - host: test.chay-techs.com
     http:
       paths:
       - path: /
