@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: chay-techs
-          image: harbor.chay-techs.com/portfolio/portfolio-front:master_dba06d5
+          image: harbor.chay-techs.com/portfolio/portfolio-front:master_d694d50
           ports:
             - containerPort: 3000
       imagePullSecrets:
