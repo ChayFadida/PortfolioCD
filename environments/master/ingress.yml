@@ -4,6 +4,7 @@ metadata:
   name: chay-techs-ingress
   namespace: chay-techs-production
   annotations:
+    kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/rewrite-target: /
 
 
